@@ -122,6 +122,7 @@ jobs:
     env:
       APP_NAME: ${{ needs.get-app-name.outputs.app_name }}
       TEST_RESULT_FOLDER_NAME: test-results
+    permissions: write-all
     steps:
       - uses: actions/checkout@v3
 
