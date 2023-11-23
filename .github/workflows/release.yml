@@ -39,6 +39,7 @@ jobs:
 
   gen-desired-state:
     uses: ./.github/workflows/gen-desired-state.yml
+    permissions: write-all
     needs: [get-app-name]
     with:
       app_name: ${{ needs.get-app-name.outputs.app_name }}
